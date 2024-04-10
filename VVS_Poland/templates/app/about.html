@@ -1,0 +1,180 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Главная{% endblock %}
+{% block head %}
+    <style>
+        .card_container{
+            margin-top: 40px;
+            width: 90%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        
+        .card {
+            width: calc(33.33% - 40px); /* Adjust according to your layout */
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        
+        .card_img {
+            height: 180px;
+            
+             /* Set your desired height */
+            overflow: hidden;
+            
+        }
+        
+        .card_img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .desc_card {
+            padding: 20px;
+            
+        }
+        
+        .text_logo_container{
+            margin-top:40px;
+            width: 90%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .text_conteiner{
+            width:80%;
+            text-align: justify; /* Выравнивание текста по ширине */
+            text-justify: inter-word; /* Добавляет интервалы между словами для выравнивания */
+            text-indent: 2em; /* Отступ первой строки */
+            padding-left: 1em; /* Отступ слева */
+            left:0;
+            
+        }
+        .logo_container{
+    
+            width:15%
+        }
+        .logo_container{
+            margin:10px auto;
+        }   
+
+        .logo_img{
+            width: 190px;/* 200px; */
+            height: 230px;/* 230px; */
+            background-image: url({%static '4.png'%});
+            background-repeat: no-repeat;
+            
+            background-size: fit;
+        }
+        .logo_img_plus{
+            display: flex;
+            align-items: top;
+            justify-content: center;
+            width: 150px;
+            height: 200px;
+        }
+        .logo_img_plus img{
+
+   
+            height: fit;
+            width: fit;
+        }
+        .logo_text{
+            display:flex;
+            justify-content:center;
+        }
+        .chapter_title{
+            margin-top:40px;
+            width:100%;
+            display:flex;
+            justify-content:center;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+
+
+
+    <h2>Конетент на ВВС </h2>
+    <div class="card_container">
+        <div class="card">
+            <div class="card_img">
+                <img src="{% static 'about/1.png' %}" alt="#">
+            </div>    
+            <p class="desc_card">
+                тексттексттексттексттекст
+            </p>
+        </div>
+        <div class="card">
+            <div class="card_img">
+                <img src="{% static 'about/2.png' %}" alt="#">
+            </div>    
+            <p class="desc_card">
+                тексттексттексттексттекст
+            </p>
+        </div>
+        <div class="card">
+            <div class="card_img">
+                <img src="{% static 'about/3.png' %}" alt="#">
+            </div>    
+            <p class="desc_card">
+                тексттекст тексттексттекст
+            </p>
+        </div>
+    </div>
+    <div class="text_logo_container">
+        <div class="text_conteiner"> тексттексттекс ттексттекст тексттексттекс ттекстт ексттексттекст тексттексттексттексттексттексттекс ттексттек сттекст тексттекс ттекстт ексттексттекст тексттек сттекстт ексттексттек сттекстт ексттекстт ексттексттекст тексттексттекс ттексттекст тексттексттекс ттекстт ексттексттекст тексттекстте ксттекстт ексттексттекс ттексттексттекст тексттексттек сттексттекс ттексттексттек сттекстт ексттексттекстте ксттексттекстт ексттексттекст</div>
+        <div class="logo_conteiner">
+            <div class="logo_img"></div>
+            <div class="logo_text">
+                <p>Эмблема ВВС Польши</p>
+            </div>
+        </div>
+    </div> 
+
+    <div class="chapter_title">
+        <h2>ПЕРВОЕ КРЫЛО ТАКТИЧЕСКОЙ АВИАЦИИ</h2>
+    </div>
+
+    <div class="text_logo_container">
+        <div class="text_conteiner">Это структура, предназначенная для решения задач современного поля боя и модернизации польских ВВС. Крыло представляет собой тактическое соединение поля боя, которое выполняет как оборонительные, так и наступательные задачи, также выполняют задачи поддержки ВМФ и Сухопутных войск.</div>
+        <div class="logo_conteiner">
+            <div class="logo_img_plus">
+                <img src="{% static '5.png'%}" alt="">
+            </div>
+        </div>
+    </div> 
+    <div class="text_logo_container">
+        <div class="text_conteiner">21 тактическая авиационная база (г. Свидвин) - Является подразделением, способным выполнять авиационные задачи самостоятельно, в его состав входят как авиационный, так и наземный компоненты, обеспечивающие материально-технические действия авиации. <br>
+            Численность л/с – 951,<br>
+            Основная техника: Су-22УМ3К -32ед, W-3 -3ед, W-3W -2ед, МИ-2 ед</div>
+            <div class="logo_conteiner">
+                <div class="logo_img_plus">
+                    <img src="{% static '6.png'%}" alt="">
+                </div>
+            </div>
+    </div> 
+    <div class="text_logo_container">
+        <div class="text_conteiner">22 тактическая авиационная база (г. Мальборк) - К основным задачам подразделения относятся, прежде всего, дежурство в системе ПВО страны, поддержание постоянной готовности к выполнению задач за счет учебно-тренировочных полетов и наземной подготовки служб обеспечения действий авиации.<br>
+            Численность л/с – 885 чел,<br>
+            Основная техника: МИГ-29 - 16 ед</div>
+            <div class="logo_conteiner">
+                <div class="logo_img_plus">
+                    <img src="{% static '7.png'%}" alt="">
+                </div>
+            </div>
+    </div> 
+    <div class="text_logo_container">
+        <div class="text_conteiner">23 тактическая авиационная база (г. Минский маз) - В основные задачи подразделения входит, прежде всего, дежурство в системе ПВО страны, поддержание постоянной готовности к выполнению задач за счет учебно-тренировочных полетов и наземной подготовки служб обеспечения действий авиации. Подразделение активно участвует во внутренних и международных авиационных учениях.<br>
+             Численность л/с – 767 чел,<br>
+            Основная техника: МИГ-29 – 16 ед , ТВ W-3 – 4 ед, ТВ МИ-2 – 1 ед.</div>
+        <div class="logo_conteiner">
+            <div class="logo_img_plus">
+                <img src="{% static '8.png'%}" alt="">
+            </div>
+        </div>
+    </div> 
+{% endblock %}

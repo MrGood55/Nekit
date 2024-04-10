@@ -1,0 +1,123 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+     
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .wrapper{
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        
+        }
+
+        /* Стили для внешнего прямоугольника */
+        .outer-box {
+            width: 100%; /* Учитываем отступы слева и справа */
+            background-color: #6D7E5A; /* Цвет внешнего прямоугольника */
+            margin-bottom: 20px; /* Отступ снизу */
+            border-radius: 10px; /* Округление углов */
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .burger-wrapper{           
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .burger{
+
+        }
+        /* Стили для внутреннего прямоугольника */
+        .inner-box {
+            margin: 0 auto;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #384629; /* Цвет внутреннего прямоугольника */
+            width: fit-content;
+        }
+
+        /* Стили для текста внутреннего прямоугольника */
+        .centered-text {
+            text-align: center;
+            color: white; /* Цвет текста */
+        }
+
+ 
+
+        /* Стили для кнопки */
+        button {
+            background-color: #384629; /* Цвет кнопки */
+            color: white; /* Цвет текста на кнопке */
+            border: none;
+            border-radius: 5px; /* Округление углов */
+            cursor: pointer;
+            padding: 10px 20px; /* Внутренний отступ */
+        }
+
+        /* Стили для кнопки при наведении */
+        button:hover {
+            background-color: #A5AAA6; /* Цвет кнопки при наведении */
+            color: black; /* Цвет текста на кнопке при наведении */
+        }
+        .center-box{
+            position: absolute;
+            top: 167px; /* Верхний край на уровне с нижним краем поля значения 11 */
+            left: 400px; /* Отступ слева */
+            right: 10px; /* Отступ справа */
+            height:  715px; /* Высота между полями значений */
+            background-color: #384629; /* Цвет дополнительного прямоугольника */
+            border-radius: 10px;
+        }
+                
+    </style>
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <div class="wrapper">
+        {% comment %} ______________ МЕНЮ ______________ {% endcomment %}
+        <div class="outer-box">
+            <div class="burger-wrapper">
+                <div class="burger">
+                    МЕНЮ
+                </div>
+            </div>{% comment %} !!!!!!!!!!!!!!!!!! ДОДЕЛАТЬ МеНЮ {% endcomment %}
+
+            <div class="inner-box">
+                
+                <h2 class="centered-text">ПМ-ОБП ВВС Польши</h2>
+                {% comment %} <div class="center-box"> {% endcomment %}
+                </div>
+            </div>
+        </div>
+
+
+        {% comment %} <div class="container mt-4"> {% endcomment %}
+            {% block content %}{% endblock %}
+        {% comment %} </div> {% endcomment %}
+    </div>
+    
+
+    
+
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>
